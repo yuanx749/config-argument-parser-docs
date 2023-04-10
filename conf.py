@@ -40,13 +40,14 @@ toc_object_entries_show_parents = 'hide'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'furo'
+html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 
 html_theme_options = {
-    'top_of_page_button': None,
+    'show_toc_level': 2,
 }
 html_title = project
+html_show_sourcelink = False
 
 # MyST-Parser
 
