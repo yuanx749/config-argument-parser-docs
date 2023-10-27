@@ -6,7 +6,10 @@
 import sys
 from pathlib import Path
 
-sys.path[:0] = [str(Path(__file__).parent / 'config-argument-parser')]
+sys.path[:0] = [
+    str(Path(__file__).parent / 'config-argument-parser'),
+    str(Path(__file__).parent),
+]
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -40,12 +43,10 @@ toc_object_entries_show_parents = 'hide'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'pydata_sphinx_theme'
+from _theme import *
+
 html_static_path = ['_static']
 
-html_theme_options = {
-    'show_toc_level': 2,
-}
 html_title = project
 html_show_sourcelink = False
 
