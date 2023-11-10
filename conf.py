@@ -68,3 +68,9 @@ autodoc_member_order = 'bysource'
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
 }
+
+# Sphinx-copybutton
+
+copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_is_regexp = True
+copybutton_copy_empty_lines = False
