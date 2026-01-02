@@ -1,0 +1,20 @@
+name: Sphinx
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: yuanx749/auto-sphinx-page-action@main
+        with:
+          requirements: requirements.txt
+          submodules: recursive
